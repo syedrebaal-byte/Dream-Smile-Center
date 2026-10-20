@@ -1,0 +1,336 @@
+import { Doctor, ServiceItem, Testimonial } from '../types';
+
+export const CLINIC_INFO = {
+  name: 'Dream Smile Center',
+  tagline: 'Premier Cosmetic & Family Dentistry of Fort Lauderdale',
+  phone: '(954) 566-8668',
+  phoneDigits: '9545668668',
+  email: 'info@dreamsmilecenter.com',
+  address: '2330 NE 9th St',
+  suite: '',
+  city: 'Fort Lauderdale',
+  state: 'FL',
+  zip: '33304',
+  neighborhood: 'Near Galleria Mall & Sunrise Blvd',
+  googleMapsUrl: 'https://maps.google.com/?q=2330+NE+9th+St,+Fort+Lauderdale,+FL+33304',
+  hours: [
+    { day: 'Monday', hours: '8:00 AM – 5:00 PM', note: 'Regular hours' },
+    { day: 'Tuesday', hours: '10:00 AM – 7:00 PM', note: 'Extended evening hours for busy schedules' },
+    { day: 'Wednesday', hours: '8:00 AM – 5:00 PM', note: 'Regular hours' },
+    { day: 'Thursday', hours: '8:00 AM – 5:00 PM', note: 'Regular hours' },
+    { day: 'Friday', hours: '8:00 AM – 2:00 PM', note: 'Morning & early afternoon' },
+    { day: 'Saturday – Sunday', hours: 'Closed', note: 'Select monthly Saturday appointments by reservation' },
+  ],
+  stats: [
+    { label: 'Verified 5-Star Reviews', value: '975+', source: 'Birdeye & Google' },
+    { label: 'Years in Fort Lauderdale', value: '30+', source: 'Established Care' },
+    { label: 'Patient Retention', value: '99%', source: 'Community Trust' },
+    { label: 'Dental Tech Precision', value: '100% Digital', source: 'Dexis & DIAGNOdent' },
+  ],
+};
+
+export const DOCTORS: Doctor[] = [
+  {
+    id: 'dr-bartlett',
+    name: 'Dr. Jeff Bartlett',
+    title: 'DDS, FAGD',
+    role: 'Lead Dentist & Founder',
+    experience: '30+ Years Practicing in Fort Lauderdale',
+    education: [
+      'University of Notre Dame (Undergraduate Honors)',
+      'The Medical College of Virginia, Dental School (Doctor of Dental Surgery)',
+      'Fellowship Award — Academy of General Dentistry (FAGD)',
+    ],
+    memberships: [
+      'Fellow, Academy of General Dentistry (FAGD)',
+      'Florida Academy of Cosmetic Dentistry',
+      'Dental Organization for Conscious Sedation (DOCS)',
+      'Oral Cancer Association',
+      'Fort Lauderdale Study Club',
+      'Dentistry for Diabetics',
+    ],
+    bio: 'Dr. Jeff Bartlett has dedicated over three decades to elevating cosmetic and comprehensive dentistry for families and professionals throughout Fort Lauderdale. As a distinguished Fellow of the Academy of General Dentistry (a credential earned by fewer than 6% of general dentists), Dr. Bartlett combines deep clinical mastery with an artistic eye for natural smile aesthetics.',
+    quote: 'Our goal has never been simply fixing teeth—it is listening to what each patient envisions, alleviating anxiety, and delivering life-changing, durable smiles that look entirely natural.',
+    specialties: ['Cosmetic Smile Makeovers', 'Porcelain Veneers', 'Sedation Dentistry', 'Complex Rehabilitation', 'Dental Implants'],
+  },
+  {
+    id: 'dr-castillo',
+    name: 'Dr. Isabel Castillo',
+    title: 'DDS',
+    role: 'Cosmetic & Restorative Dentist',
+    experience: 'Extensive Post-Doctoral Hospital Residency',
+    education: [
+      'Florida International University (Bachelor of Science)',
+      'University of Michigan School of Dentistry (Doctor of Dental Surgery)',
+      'General Practice Hospital Residency — St. Joseph Mercy Oakland Hospital',
+    ],
+    memberships: [
+      'American Dental Association (ADA)',
+      'Florida Dental Association (FDA)',
+      'Academy of General Dentistry (AGD)',
+      'Atlantic Coast District Dental Association',
+    ],
+    bio: 'Born and raised in South Florida, Dr. Isabel Castillo earned her dental degree from the prestigious University of Michigan School of Dentistry, consistently ranked among the world’s top dental schools. Following graduation, she completed rigorous hospital residency training at St. Joseph Mercy Oakland, refining her expertise in advanced restorative dentistry, surgical precision, and gentle patient care.',
+    quote: 'When patients feel heard, respected, and comfortable in our chair, everything changes. Creating beautiful smiles with gentle hands is my true calling.',
+    specialties: ['Digital Smile Design', 'Invisalign® Clear Aligners', 'Aesthetic Tooth-Colored Restorations', 'Gentle Preventative Care'],
+  },
+];
+
+export const SERVICES: ServiceItem[] = [
+  {
+    id: 'porcelain-veneers',
+    title: 'Custom Porcelain Veneers',
+    subtitle: 'Hand-crafted, micro-thin ceramic shells for a flawless, natural smile',
+    category: 'Cosmetic',
+    featured: true,
+    summary: 'Ultra-thin custom porcelain facings tailored to your facial geometry, tooth shade, and personal smile goals for lasting luminosity.',
+    fullDescription: 'Porcelain veneers represent the pinnacle of conservative cosmetic transformation. At Dream Smile Center, Dr. Bartlett and Dr. Castillo evaluate your facial symmetry, lip mobility, and natural enamel translucency before crafting your custom ceramics. Whether correcting gaps, deep discoloration, minor misalignment, or chipped teeth, our veneers reflect light identically to natural enamel.',
+    idealFor: [
+      'Discolored teeth resistant to conventional whitening',
+      'Worn down, chipped, or fractured teeth',
+      'Unwanted spacing, gaps, or slight crowding',
+      'Uneven or irregularly shaped teeth',
+    ],
+    whatToExpect: [
+      'Comprehensive smile design consultation and digital mock-up preview',
+      'Gentle, ultra-conservative enamel preparation and precise digital impressions',
+      'Custom temporaries so you can preview and test-drive your new smile',
+      'Final bonding with high-strength aesthetic resins for durable longevity',
+    ],
+    timeline: 'Typically completed in 2 to 3 appointments over 2–3 weeks.',
+    technology: ['Digital Intraoral Scanning', 'Shade-matching Spectrophotometry', 'Minimal-Prep Ceramic Crafting'],
+    faq: [
+      {
+        question: 'Do porcelain veneers look fake or bulky?',
+        answer: 'Not at Dream Smile Center. We specialize in micro-thin ceramics with natural multi-layered translucency that harmonize seamlessly with your natural facial features.',
+      },
+      {
+        question: 'How long do porcelain veneers last?',
+        answer: 'With proper oral hygiene and regular checkups at our office, high-quality porcelain veneers typically last 15 to 20 years or longer.',
+      },
+    ],
+  },
+  {
+    id: 'dental-implants',
+    title: 'Permanent Dental Implants',
+    subtitle: 'The gold standard for permanent, natural tooth replacement',
+    category: 'Restorative',
+    featured: true,
+    summary: 'Biocompatible titanium roots capped with custom zirconia or porcelain crowns that restore full chewing power and bone health.',
+    fullDescription: 'Dental implants are the most permanent, biologically sound solution for replacing one or more missing teeth. Unlike traditional bridges that require grinding down adjacent healthy teeth, an implant integrates directly into your jawbone, preserving bone density and preventing facial collapse.',
+    idealFor: [
+      'Patients missing one, multiple, or all natural teeth',
+      'Individuals struggling with loose or ill-fitting partials/dentures',
+      'Preventing bone loss and maintaining facial structure',
+      'Restoring full bite strength to enjoy all favorite foods',
+    ],
+    whatToExpect: [
+      'Digital 3D CBCT imaging to evaluate precise bone density and nerve canals',
+      'Computer-guided surgical placement for minimal post-operative discomfort',
+      'Comfortable healing period while the implant integrates securely with bone',
+      'Placement of a custom-milled ceramic crown matched precisely to adjacent teeth',
+    ],
+    timeline: '3 to 6 months depending on individual bone healing and integration.',
+    technology: ['Dexis® Low-Dose Digital Radiography', 'Custom Zirconia Abutments', 'Guided Implant Protocols'],
+    faq: [
+      {
+        question: 'Is dental implant placement painful?',
+        answer: 'Most patients report significantly less discomfort than a routine extraction. With local anesthesia and sedation options available, the procedure is smooth and pain-free.',
+      },
+      {
+        question: 'Can I replace an entire arch of missing teeth?',
+        answer: 'Yes. We offer implant-supported bridges and full-arch restorative solutions tailored to your unique anatomical needs.',
+      },
+    ],
+  },
+  {
+    id: 'invisalign',
+    title: 'Invisalign® Clear Aligners',
+    subtitle: 'Virtually invisible orthodontic alignment without metal brackets',
+    category: 'Orthodontics',
+    featured: true,
+    summary: 'Discreet, removable clear aligners that gently guide teeth into optimal alignment while letting you eat, brush, and smile with confidence.',
+    fullDescription: 'Straighten your teeth comfortably without metal wires or food restrictions. Dream Smile Center leverages digital 3D scans to map your complete tooth movement trajectory before you even begin, showing you your future smile from day one.',
+    idealFor: [
+      'Crowded teeth or overlapping incisors',
+      'Unwanted gaps and spaces between teeth',
+      'Mild-to-moderate overbites, underbites, or crossbites',
+      'Adults and teens wanting discreet orthodontic correction',
+    ],
+    whatToExpect: [
+      'Impression-free 3D digital scan of your teeth and bite',
+      'Personalized virtual treatment plan showing stage-by-stage progress',
+      'Custom aligner sets changed every 1 to 2 weeks',
+      'Quick check-ins every 6–8 weeks to verify healthy progression',
+    ],
+    timeline: 'Average treatment spans 6 to 14 months depending on complexity.',
+    technology: ['Digital 3D Treatment Simulation', 'SmartTrack® Medical-Grade Material'],
+    faq: [
+      {
+        question: 'How many hours a day must I wear the aligners?',
+        answer: 'For optimal results, wear aligners 20 to 22 hours per day, removing them only to eat, drink warm liquids, brush, and floss.',
+      },
+    ],
+  },
+  {
+    id: 'zoom-whitening',
+    title: 'Zoom!® In-Office Teeth Whitening',
+    subtitle: 'Dramatic brightness up to 8 shades in a single relaxing visit',
+    category: 'Cosmetic',
+    featured: false,
+    summary: 'Clinically proven advanced LED light-activated technology to lift deep coffee, tea, and age stains quickly and safely with minimal sensitivity.',
+    fullDescription: 'Over-the-counter strips and generic whitening trays can cause uneven results and acute gum irritation. Our in-office Zoom!® system is administered under professional supervision with protective desensitizing agents, yielding dramatic, uniform brightness in approximately 60 minutes.',
+    idealFor: [
+      'Lifting yellowing or intrinsic stains from coffee, wine, or tobacco',
+      'Upcoming weddings, public appearances, or milestone celebrations',
+      'Safe brightening formulated specifically to protect sensitive enamel',
+    ],
+    whatToExpect: [
+      'Protective barrier applied to gums and soft oral tissues',
+      'Application of proprietary pH-balanced whitening gel',
+      'Three 15-minute light-activated cycles in a comfortable reclined setting',
+      'Post-treatment enamel mineralizing treatment to prevent sensitivity',
+    ],
+    timeline: 'Single in-office appointment (approx. 75–90 minutes).',
+    technology: ['Philips Zoom!® WhiteSpeed Blue LED Technology', 'Relief ACP Oral Desensitizer'],
+    faq: [
+      {
+        question: 'Will Zoom whitening make my teeth sensitive?',
+        answer: 'Our protocol includes specialized desensitizing agents applied before and after treatment to ensure maximum comfort even for patients prone to sensitivity.',
+      },
+    ],
+  },
+  {
+    id: 'sleep-apnea-tmj',
+    title: 'Oral Appliance Therapy & TMJ',
+    subtitle: 'Non-invasive relief from snoring, sleep apnea, and jaw pain',
+    category: 'Wellness & Sleep',
+    featured: true,
+    summary: 'Custom oral sleep appliances that gently position the airway for uninterrupted breathing, alongside neuromuscular TMJ joint therapy.',
+    fullDescription: 'Obstructive sleep apnea and chronic nighttime snoring disrupt oxygen intake, cardiovascular health, and daily energy. Dr. Bartlett has advanced training in dental sleep medicine, creating custom oral appliances that serve as a quiet, comfortable alternative for patients intolerant to noisy CPAP masks.',
+    idealFor: [
+      'Chronic loud snoring disrupting your sleep or your partner’s rest',
+      'Mild to moderate Obstructive Sleep Apnea (OSA)',
+      'Patients unable to tolerate or travel with CPAP machines',
+      'Jaw clicking, clenching, morning migraines, and facial tension (TMJ/TMD)',
+    ],
+    whatToExpect: [
+      'Comprehensive airway and TMJ joint evaluation',
+      'Coordination with sleep physicians and home sleep study analysis',
+      'Custom digital impressions for a slim, comfortable nocturnal device',
+      'Follow-up calibration to verify optimal airflow and joint comfort',
+    ],
+    timeline: 'Fabrication in 2 to 3 weeks followed by comfortable calibration.',
+    technology: ['Precision Mandibular Repositioning Devices', 'Digital Occlusal Analysis'],
+    faq: [
+      {
+        question: 'Is oral appliance therapy covered by medical insurance?',
+        answer: 'Yes! In many cases, oral appliances for sleep apnea are covered under medical insurance rather than dental insurance. Our front desk assists you with benefits verification.',
+      },
+    ],
+  },
+  {
+    id: 'preventative-laser',
+    title: 'Laser Diagnostics & Gentle Hygiene',
+    subtitle: 'DIAGNOdent™ laser cavity detection and low-dose Dexis® imaging',
+    category: 'Preventative',
+    featured: false,
+    summary: 'Detect hidden micro-decay years before it shows on standard x-rays, preserving maximum healthy tooth structure with minimal radiation.',
+    fullDescription: 'Modern dentistry should be preventative and conservative. Dream Smile Center uses DIAGNOdent™ fluorescent laser technology to detect microscopic sub-surface decay early, when it can be addressed conservatively without aggressive drilling.',
+    idealFor: [
+      'Adults and children desiring gentle, pain-free preventative maintenance',
+      'Early detection of decay before it reaches sensitive dental nerves',
+      'Patients mindful of radiation exposure (Dexis digital reduces radiation by up to 80%)',
+    ],
+    whatToExpect: [
+      'Comprehensive periodontal mapping and ultrasonic gentle cleaning',
+      'DIAGNOdent™ laser scan of deep tooth grooves and fissures',
+      'Dexis® ultra-low-dose digital radiographic imaging',
+      'One-on-one consultation with Dr. Bartlett or Dr. Castillo',
+    ],
+    timeline: 'Standard 50–60 minute comprehensive wellness visit.',
+    technology: ['DIAGNOdent™ Laser Diode Detection', 'Dexis® Low-Dose Digital Radiography', 'Intraoral HD Cameras'],
+    faq: [
+      {
+        question: 'How often should I have an exam and cleaning?',
+        answer: 'For most patients, every 6 months is recommended. Patients with a history of periodontal disease may benefit from quarterly visits.',
+      },
+    ],
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'rev-1',
+    patientName: 'Victoria M.',
+    treatment: 'Porcelain Veneers & Smile Makeover',
+    rating: 5,
+    date: 'Verified Patient',
+    source: 'Birdeye',
+    quote: 'Dr. Bartlett gave me the smile I have dreamed about my entire adult life. He spent over an hour explaining every detail of the veneers and never made me feel rushed. The staff treats you like royalty from the moment you step in. Everyone thinks my teeth are just naturally perfect!',
+    verified: true,
+  },
+  {
+    id: 'rev-2',
+    patientName: 'David K.',
+    treatment: 'Dental Implant & Crown',
+    rating: 5,
+    date: 'Verified Patient',
+    source: 'Google',
+    quote: 'I had been putting off an implant for years due to dental phobia. Dr. Castillo was extraordinarily gentle, walking me through every step. Zero pain during the procedure, and now I can chew steak and apples again without second thought. The office is spotlessly clean and modern.',
+    verified: true,
+  },
+  {
+    id: 'rev-3',
+    patientName: 'Elena R.',
+    treatment: 'Invisalign & Teeth Whitening',
+    rating: 5,
+    date: 'Verified Patient',
+    source: 'Zocdoc',
+    quote: 'Dream Smile Center is hands-down the best dental practice in Fort Lauderdale. In less than 9 months, my teeth are straight and bright with Invisalign. The Tuesday evening hours until 7 PM are a lifesaver for my corporate work schedule.',
+    verified: true,
+  },
+  {
+    id: 'rev-4',
+    patientName: 'Marcus T.',
+    treatment: 'Oral Sleep Appliance for Sleep Apnea',
+    rating: 5,
+    date: 'Verified Patient',
+    source: 'PatientConnect365',
+    quote: 'I could never sleep with a CPAP machine and was exhausted every day. Dr. Bartlett fitted me with an oral appliance for my snoring and apnea. It is discreet, easy to pack for flights, and my wife and I finally sleep through the night peacefully.',
+    verified: true,
+  },
+  {
+    id: 'rev-5',
+    patientName: 'Sarah B.',
+    treatment: 'Routine Hygiene & Preventative Care',
+    rating: 5,
+    date: 'Verified Patient',
+    source: 'Google',
+    quote: 'Been coming here for 12 years. The Dexis digital x-rays and laser cavity detection are so advanced. You never feel pushed into unnecessary treatments. Honest, conservative, and caring doctors who truly remember your family.',
+    verified: true,
+  },
+];
+
+export const FAQS = [
+  {
+    q: 'What makes Dream Smile Center different from corporate dental chains?',
+    a: 'Dream Smile Center is an independent, doctor-owned practice that has served Fort Lauderdale for over 30 years. You see the same experienced doctors—Dr. Jeff Bartlett and Dr. Isabel Castillo—at every visit. We practice conservative, relationship-centered care using state-of-the-art diagnostic technology.',
+  },
+  {
+    q: 'Do you accept dental insurance and offer payment plans?',
+    a: 'Yes. We accept most major PPO dental insurance plans and will gladly file your claims directly on your behalf to maximize your benefits. For out-of-pocket expenses and cosmetic procedures, we offer flexible monthly financing through CareCredit® with 0% interest promotional options.',
+  },
+  {
+    q: 'I experience high dental anxiety. What comfort options do you provide?',
+    a: 'We understand dental anxiety and design our entire office environment to feel relaxing and spa-like. Dr. Bartlett is a member of the Dental Organization for Conscious Sedation (DOCS). We offer gentle local anesthesia, nitrous oxide, and oral conscious sedation to ensure you remain completely relaxed throughout treatment.',
+  },
+  {
+    q: 'Where are you located and is there convenient parking?',
+    a: 'We are located at 2330 NE 9th St in Fort Lauderdale, FL 33304, conveniently located near Sunrise Blvd and Galleria Mall. We offer dedicated, complimentary patient parking directly outside our facility.',
+  },
+  {
+    q: 'How quickly can I be seen for a dental emergency?',
+    a: 'We prioritize existing and new patients experiencing severe tooth pain, broken restorations, or trauma. Please call our direct line at (954) 566-8668 immediately, and our team will work to accommodate you on the same day.',
+  },
+];
